@@ -8,16 +8,16 @@ class Grails3CorsInterceptorGrailsPlugin extends Plugin {
     def grailsVersion = "3.0.4 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-        "grails-app/views/error.gsp"
+        "grails-app/views/*.gsp"
     ]
 
     // TODO Fill in these fields
     def version = "0.1.0"
     def title = "Grails3 CORS Interceptor" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Ivan Chang"
+    def authorEmail = "ichang@appcela.com"
     def description = '''\
-Brief summary/description of the plugin.
+Add Cross-Origin Resource Sharing (CORS) headers for Grails applications.
 '''
     def profiles = ['web']
 
