@@ -12,7 +12,7 @@ class Grails3CorsInterceptorGrailsPlugin extends Plugin {
     ]
 
     // TODO Fill in these fields
-    def version = "0.1.0"
+    def version = "0.1.0" // must be added explicitly
     def title = "Grails3 CORS Interceptor" // Headline display name of the plugin
     def author = "Ivan Chang"
     def authorEmail = "ichang@appcela.com"
@@ -27,10 +27,10 @@ Add Cross-Origin Resource Sharing (CORS) headers for Grails applications.
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "MIT"
 
     // Details of company behind the plugin (if there is one)
-//    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
+    def organization = [ name: "Appcela", url: "http://www.appcela.com/" ]
 
     // Any additional developers beyond the author specified above.
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
