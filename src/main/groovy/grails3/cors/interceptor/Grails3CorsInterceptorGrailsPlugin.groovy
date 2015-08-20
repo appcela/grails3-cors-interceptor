@@ -43,7 +43,7 @@ Add Cross-Origin Resource Sharing (CORS) headers for Grails applications.
 
     Closure doWithSpring() { {->
             // TODO Implement runtime spring config (optional)
-        } 
+        }
     }
 
     void doWithDynamicMethods() {
@@ -51,7 +51,8 @@ Add Cross-Origin Resource Sharing (CORS) headers for Grails applications.
     }
 
     void doWithApplicationContext() {
-        // TODO Implement post initialization spring config (optional)
+        // Delegate OPTIONS requests to controllers
+        applicationContext.dispatcherServlet.setDispatchOptionsRequest(true)
     }
 
     void onChange(Map<String, Object> event) {

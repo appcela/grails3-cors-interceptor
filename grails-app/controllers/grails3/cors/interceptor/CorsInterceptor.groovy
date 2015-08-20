@@ -18,18 +18,18 @@ class CorsInterceptor {
 
     boolean before() {
         String origin = request.getHeader("Origin");
-
-        boolean options = "OPTIONS".equals(request.getMethod());
+        boolean options = ("OPTIONS" == request.method)
         if (options) {
+            header("Allow", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS")
             if (origin != null) {
-                response.addHeader("Access-Control-Allow-Headers", "origin, authorization, accept, content-type, x-requested-with");
-                response.addHeader("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS");
-                response.addHeader("Access-Control-Max-Age", "3600");
+                header("Access-Control-Allow-Headers", "origin, authorization, accept, content-type, x-requested-with")
+                header("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS")
+                header("Access-Control-Max-Age", "3600")
             }
         }
 
-        response.addHeader("Access-Control-Allow-Origin", origin == null ? "*" : origin);
-        response.addHeader("Access-Control-Allow-Credentials", "true");
+        header("Access-Control-Allow-Origin", origin ?: "*")
+        header("Access-Control-Allow-Credentials", "true")
 
         true // proceed to controller
     }
