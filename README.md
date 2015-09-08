@@ -34,5 +34,19 @@ To support the preflight CORS request with HTTP OPTIONS method, url mappings for
 "/books/$id?"(controller:'book', method: 'OPTIONS') // explicitly map OPTIONS method to "book" REST controller
 ```
 
+## 3. (Optional) Configuration Settings
+
+*application.yml*
+
+```
+corsInterceptor:
+    includeEnvironments: ['development', 'test']
+    excludeEnvironments: ['production']
+    allowedOrigins: ['yourhost.com']
+```
+
+- includeEnvironments - include this plugin only in the environments listed (default to all environments)
+- excludeEnvironments - exclude this plugin from the environments listed (default to null)
+- allowedOrigins - white list for allowed origins (default to all origins without restrictions)
 
 
