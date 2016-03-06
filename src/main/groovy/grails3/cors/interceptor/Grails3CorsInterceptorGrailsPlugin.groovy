@@ -5,14 +5,14 @@ import grails.plugins.*
 class Grails3CorsInterceptorGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.0.4 > *"
+    def grailsVersion = "3.0.15 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/*.gsp"
     ]
 
     // TODO Fill in these fields
-    def version = "0.1.2" // must be added explicitly
+    def version = "0.1.3" // must be added explicitly
     def title = "Grails3 CORS Interceptor" // Headline display name of the plugin
     def author = "Ivan Chang"
     def authorEmail = "ichang@appcela.com"
