@@ -12,7 +12,7 @@ class Grails3CorsInterceptorGrailsPlugin extends Plugin {
     ]
 
     // TODO Fill in these fields
-    def version = "0.1.3" // must be added explicitly
+    def version = "0.1.4" // must be added explicitly
     def title = "Grails3 CORS Interceptor" // Headline display name of the plugin
     def author = "Ivan Chang"
     def authorEmail = "ichang@appcela.com"
