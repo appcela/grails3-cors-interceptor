@@ -36,10 +36,10 @@ class CorsInterceptor {
         String origin = request.getHeader("Origin");
         boolean options = ("OPTIONS" == request.method)
         if (options) {
-            header("Allow", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS")
+            header("Allow", "GET, HEAD, POST, PUT, DELETE, TRACE, PATCH, OPTIONS")
             if (origin != null) {
                 header("Access-Control-Allow-Headers", "origin, authorization, accept, content-type, x-requested-with")
-                header("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS")
+                header("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, PATCH, OPTIONS")
                 header("Access-Control-Max-Age", "3600")
             }
         }
