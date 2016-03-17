@@ -24,7 +24,7 @@ Add the following dependency to your Grails app,
 *build.gradle*
 
 ```
-compile "org.grails.plugins:grails3-cors-interceptor:0.1.1"
+compile "org.grails.plugins:grails3-cors-interceptor:0.1.4"
 ```
 
 ## 2. Add HTTP OPTIONS Method URL Mapping 
