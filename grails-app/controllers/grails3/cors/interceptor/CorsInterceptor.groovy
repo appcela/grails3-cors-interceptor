@@ -55,7 +55,7 @@ class CorsInterceptor {
             header("Access-Control-Allow-Credentials", "true")
         }
 
-        true // proceed to controller
+        !options // proceed to controller if method is not 'OPTIONS'
     }
 
     boolean after() { true }
