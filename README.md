@@ -7,7 +7,7 @@ This plugin will add a new Interceptor (see [Grails 3 Interceptor API](https://g
 
 This plugin has only been tested with Grails 3.0., 3.0.15 and 3.1.4.
 
-- for Grails 3.1.4+, please use version `0.1.6`
+- for Grails 3.1.4+, please use version `1.0.0`
 - for Grails 3.0.15+, please use version `0.1.5` 
 - for Grails 3.0.4 - 3.0.14, please use version `0.1.2`
  
@@ -53,5 +53,10 @@ corsInterceptor:
 - includeEnvironments - include this plugin only in the environments listed (default to all environments)
 - excludeEnvironments - exclude this plugin from the environments listed (default to null)
 - allowedOrigins - white list for allowed origins (default to all origins without restrictions)
+
+# Working with Spring Security Core or Spring Security REST Plugins
+
+See the sample app [grails3-cors-interceptor-spring-security-rest-sample-app](https://github.com/appcela/grails3-cors-interceptor-spring-security-rest-sample-app) for detailed 
+instructions on how to get `grails3-cors-interceptor` working with [Spring Security Core](https://grails-plugins.github.io/grails-spring-security-core/v3/index.html) or [Spring Security REST plugin](http://alvarosanchez.github.io/grails-spring-security-rest/2.0.0.M2/docs/index.html).
 
 
