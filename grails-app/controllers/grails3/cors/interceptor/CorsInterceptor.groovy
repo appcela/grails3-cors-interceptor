@@ -1,7 +1,6 @@
 package grails3.cors.interceptor
 
 import grails.compiler.GrailsCompileStatic
-import grails.util.Environment
 
 /**
  * Add Cross-Origin Resource Sharing (CORS) headers for Grails applications. These headers make it possible for
@@ -12,12 +11,17 @@ import grails.util.Environment
 @GrailsCompileStatic
 class CorsInterceptor {
 
+    CorsService corsService
+
     CorsInterceptor() {
         matchAll() // match all controllers
         //.excludes(controller:"login")   // uncomment to add exclusion
     }
 
     boolean before() {
+        !corsService.processPreflight(request, response)
+
+        /*
         Map corsInterceptorConfig = (Map) grailsApplication.config.corsInterceptor
         String[] includeEnvironments = corsInterceptorConfig['includeEnvironments']?: null
         String[] excludeEnvironments = corsInterceptorConfig['excludeEnvironments']?: null
@@ -56,6 +60,7 @@ class CorsInterceptor {
         }
 
         !options // proceed to controller if method is not 'OPTIONS'
+        */
     }
 
     boolean after() { true }

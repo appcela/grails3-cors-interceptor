@@ -7,7 +7,7 @@ This plugin will add a new Interceptor (see [Grails 3 Interceptor API](https://g
 
 This plugin has only been tested with Grails 3.0., 3.0.15 and 3.1.4.
 
-- for Grails 3.1.4+, please use version `1.0.0`
+- for Grails 3.1.4+, please use version `1.1.0`
 - for Grails 3.0.15+, please use version `0.1.5` 
 - for Grails 3.0.4 - 3.0.14, please use version `0.1.2`
  
