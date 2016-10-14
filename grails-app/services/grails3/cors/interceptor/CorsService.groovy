@@ -19,13 +19,12 @@ class CorsService {
 
         if( excludeEnvironments && excludeEnvironments.contains(Environment.current.name) )  { // current env is excluded
             // skip
-            false
+            return false
         }
         else if( includeEnvironments && !includeEnvironments.contains(Environment.current.name) )  {  // current env is not included
             // skip
-            false
+            return false
         }
-
 
         String origin = request.getHeader("Origin");
         boolean options = ("OPTIONS" == request.method)
