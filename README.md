@@ -5,9 +5,9 @@ Add Cross-Origin Resource Sharing (CORS) headers for Grails 3 applications.
 
 This plugin will add a new Interceptor (see [Grails 3 Interceptor API](https://grails.github.io/grails-doc/latest/guide/single.html#interceptors)) to your Grails app that adds CORS headers to all your controllers and actions.
 
-This plugin has only been tested with Grails 3.0., 3.0.15, 3.1.4 and 3.2.0
+This plugin has only been tested with Grails 3.0., 3.0.15, 3.1.4 and 3.2.0, 3.2.1
 
-- for Grails 3.1.4+, please use version `1.2.0`
+- for Grails 3.1.4+, please use version `1.2.1`
 - for Grails 3.0.15+, please use version `0.1.5` 
 - for Grails 3.0.4 - 3.0.14, please use version `0.1.2`
  
@@ -25,7 +25,7 @@ Add the following dependency to your Grails app,
 *build.gradle*
 
 ```
-compile "org.grails.plugins:grails3-cors-interceptor:1.2.0"
+compile "org.grails.plugins:grails3-cors-interceptor:1.2.1"
 ```
 
 ## 2. (Optional) Add HTTP OPTIONS Method URL Mapping 
