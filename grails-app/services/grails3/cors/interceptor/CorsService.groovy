@@ -2,6 +2,7 @@ package grails3.cors.interceptor
 
 import grails.transaction.Transactional
 import grails.util.Environment
+import org.springframework.http.HttpStatus
 
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
@@ -36,6 +37,8 @@ class CorsService {
                 response.setHeader("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, PATCH, OPTIONS")
                 response.setHeader("Access-Control-Max-Age", "3600")
             }
+            // enforce 200 OK response for OPTIONS request
+            response.status = HttpStatus.OK.value()
         }
 
         if( allowedOrigins && allowedOrigins.contains(origin)) { // request origin is on the white list
