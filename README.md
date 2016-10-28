@@ -7,7 +7,7 @@ This plugin will add a new Interceptor (see [Grails 3 Interceptor API](https://g
 
 This plugin has only been tested with Grails 3.0., 3.0.15, 3.1.4 and 3.2.0
 
-- for Grails 3.1.4+, please use version `1.1.0`
+- for Grails 3.1.4+, please use version `1.2.0`
 - for Grails 3.0.15+, please use version `0.1.5` 
 - for Grails 3.0.4 - 3.0.14, please use version `0.1.2`
  
@@ -25,7 +25,7 @@ Add the following dependency to your Grails app,
 *build.gradle*
 
 ```
-compile "org.grails.plugins:grails3-cors-interceptor:1.1.0"
+compile "org.grails.plugins:grails3-cors-interceptor:1.2.0"
 ```
 
 ## 2. (Optional) Add HTTP OPTIONS Method URL Mapping 
@@ -50,11 +50,13 @@ corsInterceptor:
     includeEnvironments: ['development', 'test']
     excludeEnvironments: ['production']
     allowedOrigins: ['yourhost.com']
+    allowedHeaders: ['my-authorization-header', 'origin', 'content-type', 'accept']
 ```
 
 - includeEnvironments - include this plugin only in the environments listed (default to all environments)
 - excludeEnvironments - exclude this plugin from the environments listed (default to null)
 - allowedOrigins - white list for allowed origins (default to all origins without restrictions)
+- allowedHeaders - custom headers to be used in "Access-Control-Allow-Headers" (default to `["origin", "authorization", "accept", "content-type", "x-requested-with"]`)
 
 # Working with Spring Security Core or Spring Security REST Plugins
 
